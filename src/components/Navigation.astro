@@ -1,0 +1,259 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { newsActive } = Astro.props;
+const { aboutActive } = Astro.props;
+const { programActive } = Astro.props;
+const { teachersActive } = Astro.props;
+const { galleryActive } = Astro.props;
+const { contactActive } = Astro.props;
+const { eventActive } = Astro.props;
+---
+
+<nav
+  class="navbar navbar-expand-lg fs-5"
+  data-bs-theme="dark"
+  style="background-color: #fc792b"
+>
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          {
+            newsActive ? (
+              <a class="nav-link active" href={`/${lang}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                  />
+                </svg>{" "}
+                {`${t("nav.news")}`}
+              </a>
+            ) : (
+              <a class="nav-link" href={`/${lang}`}>{`${t("nav.news")}`}</a>
+            )
+          }
+        </li>
+        <li class="nav-item">
+          {
+            aboutActive ? (
+              <a class="nav-link active" href={`/${lang}/about`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                  />
+                </svg>
+                {t("nav.about")}
+              </a>
+            ) : (
+              <a class="nav-link" href={`/${lang}/about`}>
+                {t("nav.about")}
+              </a>
+            )
+          }
+          <li class="nav-item dropdown">
+            {
+              programActive ? (
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                    />
+                  </svg>
+                  {`${t("nav.programs")}`}
+                </a>
+              ) : (
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {`${t("nav.programs")}`}
+                </a>
+              )
+            }
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: #ff692b"
+            >
+              <a class="dropdown-item" href={`/${lang}/ringato`}>
+                {`${t("nav.ringato")}`}
+              </a>
+              <a class="dropdown-item" href={`/${lang}/kerekito`}>
+                {`${t("nav.kerekito")}`}
+              </a>
+              <a class="dropdown-item" href={`/${lang}/zeneovi_program`}
+                >{`${t("nav.ovi")}`}</a
+              >
+              <a class="dropdown-item" href={`/${lang}/suli_program`}
+                >{`${t("nav.school")}`}</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            {
+              teachersActive ? (
+                <a class="nav-link active" href={`/${lang}/teachers`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                    />
+                  </svg>
+                  {`${t("nav.teachers")}`}
+                </a>
+              ) : (
+                <a
+                  class="nav-link"
+                  href={`/${lang}/teachers`}
+                >{`${t("nav.teachers")}`}</a>
+              )
+            }
+          </li>
+          <li class="nav-item">
+            {
+              galleryActive ? (
+                <a class="nav-link active" href={`/${lang}/gallery`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                    />
+                  </svg>
+                  {`${t("nav.gallery")}`}
+                </a>
+              ) : (
+                <a
+                  class="nav-link"
+                  href={`/${lang}/gallery`}
+                >{`${t("nav.gallery")}`}</a>
+              )
+            }
+          </li>
+          <li class="nav-item">
+            {
+              contactActive ? (
+                <a class="nav-link active" href={`/${lang}/contact`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                    />
+                  </svg>
+                  {`${t("nav.contact")}`}
+                </a>
+              ) : (
+                <a
+                  class="nav-link"
+                  href={`/${lang}/contact`}
+                >{`${t("nav.contact")}`}</a>
+              )
+            }
+          </li>
+          <li class="nav-item">
+            {
+              eventActive ? (
+                <a class="nav-link active" href={`/${lang}/event`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                    />
+                  </svg>
+                  {`${t("nav.event")}`}
+                </a>
+              ) : (
+                <a
+                  class="nav-link"
+                  href={`/${lang}/event`}
+                >{`${t("nav.event")}`}</a>
+              )
+            }
+          </li>
+        </li>
+
+        <span class="navbar-text">
+          <a href={`/${t("nav.lang_url")}`}>
+            <span class={`flag-icon flag-icon-${t("nav.lang_url")}`}></span>
+            {t("nav.language")}</a
+          >
+        </span>
+      </ul>
+    </div>
+  </div>
+</nav>

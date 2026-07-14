@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Registration from '../../components/RegistrationForm.jsx';
+---
+<BaseLayout title="REGISZTRÁCIÓ az október 6-i Magyar Népmese Napra!" eventActive="true">
+<p>
+    Szeretettel várunk benneteket rendezvényünkre a  MACSEK-ben,
+    Stadshagsvägen 7, 112 50, Stockholm. A részvétel létszámkorlátozás miatt
+    regisztráció köteles. Részvételi díj <b>50 kr/fő/félnap</b> vagy 
+    <b>75 kr/család/egész nap</b> ( gyerekek szüleikkel), amit helyben kérünk swishelni. Betegség
+    vagy /és egyéb elfoglaltság esetén kérjük mondják vissza
+    helyfoglalásukat október 6-án reggel 8 óráig az <a href="mailto:info@macsek.se">
+    info@macsek.se</a> e-mail címen.    
+</p>    
+<Registration client:load/>
+</BaseLayout>

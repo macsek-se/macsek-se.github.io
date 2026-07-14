@@ -1,0 +1,100 @@
+form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: grid;
+    gap: 20px;
+    background-color: #ccc;
+  }
+  
+  form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  form .form-group input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .child-input, .relative-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .child-input input, .relative-input input {
+    padding: 5px;
+    flex: 1;
+  }
+  
+  .child-input button, .relative-input button {
+    flex-shrink: 0;
+  }
+  
+  button[type="submit"], button {
+    background-color: #fc792b;
+    color: white;
+    padding: 10px 20px;
+  }
+ 
+  input[type="date"]::before {
+    content: attr(placeholder);
+    color: #aaa;
+    position: absolute;
+    margin-left: 5px;
+  }
+  
+  input[type="date"]:focus::before,
+  input[type="date"]:valid::before {
+    display: none;
+  }
+  
+  .child-input {
+    position: relative;
+  }
+  
+  input[type="date"] {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+ 
+  .event-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .event-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+
+  .event-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+}

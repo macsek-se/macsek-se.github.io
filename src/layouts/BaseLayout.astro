@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Title from "../components/Title.astro"
+
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+const lastModified = year + "-" + month + "-" + day;
+const { title } = Astro.props.frontmatter || Astro.props
+const { newsActive } = Astro.props.frontmatter || Astro.props
+const { aboutActive } = Astro.props.frontmatter || Astro.props
+const { programActive } = Astro.props.frontmatter || Astro.props
+const { teachersActive } = Astro.props.frontmatter || Astro.props
+const { galleryActive } = Astro.props.frontmatter || Astro.props
+const { contactActive } = Astro.props.frontmatter || Astro.props
+const { eventActive } = Astro.props.frontmatter || Astro.props
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+<html lang="en">
+  <head>
+    <title>{ title }</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+      type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header d-none d-lg-block">
+        <div class="row">
+         <div class="col left">
+        <p><img src="/logo1.png" style="height: 200px;margin-top: 40px; padding-left: 5vw;"/></p>
+          </div> 
+          <div class="col-4">
+        <p class="headerH1">Magyar<br/>Csemeték<br/>Közössége</p>
+          </div>
+          <div class="col">
+        <p><img src="/macsek_cat.png" style="margin-top: 5px" width="240"></p>
+          </div>
+          <div class="col right">
+        <p><img src="/motto2.png" style="margin-top: 50px" class="d-none d-xl-block"></p>
+          </div>
+        </div>
+      </div>
+      <div class=" headerMobile d-block d-lg-none">
+        <img
+          class="img-responsive"
+          style="display:inline-block;height:100px;margin-top:20px;vertical-align: top;"
+          src="/logo1.png"/>
+        <h2 class="headerH1Mobile">Magyar<br />Csemeték<br />Közössége</h2>
+      </div>
+    <Navigation newsActive={ newsActive}
+                aboutActive={ aboutActive} programActive={ programActive}
+                teachersActive={ teachersActive} galleryActive={ galleryActive }
+                contactActive={ contactActive } eventActive={ eventActive }/>
+    </div>
+    <div class="main-container">
+    <div class="grid-container">
+      <div class="sidebar-left"></div>
+      <div class="main-content">
+        { !newsActive && 
+        <Title title={ title }></Title> }
+        <slot />
+      </div>
+      <div class="sidebar-right"></div>
+    </div>
+    </div>
+      <div class="footerClass">
+        { t("footer.web_update") }
+         <b>{lastModified}</b>
+      </div>
+   <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  
+  </body>
+</html>

@@ -1,0 +1,170 @@
+@font-face {
+  font-family: macsek;
+  src: url("/fonts/KidzoneFontPro.ttf")  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif !important;
+  margin: 0px;
+  background-color: #ffffff;
+}
+.navbar {
+  padding-left: 8vw;
+  padding-right: 1vw;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fc792b;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin: 0px;
+}
+
+.header {
+  background: url(/headerbg_summer4.png) top center;
+  margin: 0px;
+}
+
+.headerH1 {
+  display: inline-block;
+  padding: 0px 100px 0px 100px;
+  color: #fc792b !important;
+  margin-top: 5px;
+  font-family: macsek;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  text-align: center;
+}
+
+.headerMobile {
+  margin: 0px;
+  padding: 0px;
+  background-color: #c1f8f5;
+}
+.headerH1Mobile {
+  display: inline-block;
+  color: #fc792b !important;
+  margin: calc(10px + 1vw);
+  font-weight: normal !important;
+}
+.contentClass {
+  min-height: 50vh;
+}
+.newsClass {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+p.newsClass {
+  font-size: calc(14px + 0.4vw);
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+
+.footerClass {
+  margin-bottom: 0px;
+  padding: 20px;
+  color: #fc792b;
+  background-color: #c9c9c9;
+}
+
+.blueBar {
+  background-color: #2ad07a;
+  padding: 10px 40px 7px 40px;
+  font-family: macsek;
+  font-size:x-large;
+  color: white;
+  border-radius: 8px;
+  margin-top: -7px;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  font-size: calc(13px + 0.4vw);
+}
+
+.nav-item > a:hover {
+  font-size: calc(13px + 0.4vw);
+  color: yellow;
+}
+
+.navbar-nav > .active > a {
+  background-color: #c0c0c0;
+  color: yellow;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #f2f516;
+  color: black !important;
+}
+
+img.test {
+  max-width: 100%;
+}
+
+h1 {
+  text-align: left;
+  line-height: 1.5em;
+  color: green;
+  font-size: 40px;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  border: 2px solid green;
+}
+
+h2 {
+  text-align: left;
+  line-height: 1.5em;
+  color: green;
+  font-size: 40px;
+}
+
+h2:after {
+  content: " ";
+  display: block;
+  border: 2px solid green;
+}
+.main-container {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr; /* Three columns: left sidebar, main content, right sidebar */
+  grid-template-rows: auto; /* Adjust row heights based on content */
+  gap: 0px; /* Space between grid items */
+  padding: 0px;
+  max-width: 1200px; /* Max width of the container */
+  width: 100%; /* Full width of the container */       
+  margin: 0 auto; /* Center the grid container horizontally */
+}
+
+.sidebar-left,
+.sidebar-right {
+  background-color: #f4f4f4;
+  padding: 0px;
+  border: 0px solid #ddd;
+  width: 100%;
+}
+
+.main-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.swiper-container {
+  display: block;
+  visibility: visible; 
+  min-width: 320px; /* Set the minimum width of the slider */
+}
