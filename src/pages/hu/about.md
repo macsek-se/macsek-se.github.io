@@ -50,10 +50,12 @@ Az egyesület alapszabálya itt érhető el.
 
 Salinas Lanchipa Hilda – elnök
 
-Lieb Márta - alelnök
+Andrade Diestra Melinda - alelnök
 
 Nyitrai-Ott Bernadett – titkár
 
 Arturo Agapito Salinas Lanchipa – pénztáros
 
-Tóth Imola - póttag
+Borbás Eszter - vezetőségi tag
+
+Lázár Enikő - póttag
