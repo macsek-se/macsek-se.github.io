@@ -30,7 +30,7 @@ Jag välkomnar er varmt till mina lektioner!
 
 ### Zita Tóthné Vermes
 
-<img src=/teacher.jpg  style="width:15vw;border-radius:1vw;margin-right:5vw;" >
+<img src="/teacher.jpg"  style="width:15vw;border-radius:1vw;margin-right:5vw;" >
 
 Redan som litet barn hade jag tankar på att bli lärare. Undervisning är en
 tradition i vår familj, min mamma och min bror är pedagoger, och min farfar var
