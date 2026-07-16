@@ -38,6 +38,7 @@ const t = useTranslations(lang);
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="/favicon.ico" sizes="any"/>
   </head>
   <body>
     <div class="container-fluid">
@@ -91,7 +92,7 @@ const t = useTranslations(lang);
       <div class="grid-container">
         <div class="sidebar-left"></div>
         <div class="main-content">
-          {!programActive&& <Title title={title} />}
+          {!programActive && <Title title={title} />}
           <slot />
         </div>
         <div class="sidebar-right"></div>
