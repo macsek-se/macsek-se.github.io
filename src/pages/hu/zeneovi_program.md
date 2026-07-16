@@ -13,33 +13,22 @@ A szülőnek lehetősége van a helységen belül várakozni igény esetén.
 A foglalkozásokat a következő menetrend szerint tartjuk:
 
 - 9.30-10.00 szabad játék
-- 10.00-10.40 Kerekítő Zeneovi
+- 10.00-10.40 MACSEK Zeneovi
 - 10.40-11.00 szünet
 - 11.00-11.30 kézműves foglalkozás
 
 Hasznos tudnivalók:
 - öltözet: váltócipő
+- tízórai otthonról
 - a foglalkozásokon csak egészséges gyermekek vehetnek részt
 
 A __MACSEK Zeneovira__ a részvételi szándékot kérjük e-mailben jelezni a
 magyarcsemetekkozossege@gmail.com címünkre.
 
-## A tagsági díja:
-
-- 1 gyermek esetén 1100 kr/félév,
-- 2 vagy több gyermekek esetén 1500 kr/félév.
-
-Fizetési határidő: 2024. szeptember 14. Bankgiro számunk: 544-2686 A közlemény
-rovatba kérjük a gyermek(ek) nevét beírni. 
-
 # Időpontok
 
 A MACSEK Zeneovi foglalkozások heti rendszerességgel folynak vasárnaponként
-9:30-től összesen félévenként 12 vagy 13 alkalommal.
-
-## Őszi félév
-
-Kezdés: 2024. szeptember 1.
+9:30-től összesen félévenként 13 alkalommal.
 
 # Helyszín
 
