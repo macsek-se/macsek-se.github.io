@@ -10,11 +10,7 @@ style="width:15vw;border-radius:1vw;margin-right:5vw; margin-bottom:2vw" >
 </a>
 
 A __Ringató__ foglalkozások ingyenesek. Helyszíne a Folkuniversitet egyik terme. Ide
-szerdánként várjuk a babás, totyogós családokat 10 óratól. Bejelentkezés nem 
-szükséges. A pontos teremszámot a https://www.facebook.com/ringato.stockholm facebook 
-oldalon kírjuk ki minden egyes foglalkozás előtt.
-
-2024 őszi félév: szeptember 11-től szerdánként hetente.
+csütörtökönként várjuk a babás, totyogós családokat 10 óratól. Bejelentkezés csak az első alkalom előtt szükséges.
 
 <img src="/ringato.png" style="width:15vw;border-radius:1vw;margin-right:5vw;
 margin-bottom:2vw" >
